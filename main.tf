@@ -1,15 +1,15 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0" # This is an example Amazon Linux 2 AMI ID; replace with an appropriate AMI ID for your region
+  ami           = "ami-09f85944838b438c5" 
   instance_type = "t2.micro"
 
   tags = {
-    Name = "example-instance"
+    Name = "jpmc-pac-ec2"
     env  = "development"
-    team = "example-team"
+    team = "CTO-team"
   }
 }
 
@@ -19,14 +19,14 @@ resource "aws_db_instance" "example" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
-  db_name                 = "example-db"
+  db_name              = "jpmc-pac-db"
   username             = var.db_username
   password             = var.db_password
   parameter_group_name = "default.mysql5.7"
 
   tags = {
-    Name = "example-db"
+    Name = "jpmc-pac-db"
     env  = "development"
-    team = "example-team"
+    team = "CTO-team"
   }
 }
