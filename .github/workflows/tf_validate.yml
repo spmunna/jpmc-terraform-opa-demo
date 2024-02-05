@@ -67,7 +67,8 @@ jobs:
               echo "Cost policy violations:" >> $GITHUB_STEP_SUMMARY
               cat cost_policy_result.txt >> $GITHUB_STEP_SUMMARY
             fi
-          # exit 1
+            echo "Done..."
+          
         fi
 
     - name: Add policy results to job summary
