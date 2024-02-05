@@ -9,7 +9,7 @@ resource "aws_instance" "example" {
   tags = {
     Name = "jpmc-pac-ec2"
     env  = "development"
-    team = "CTO-team"
+    team = "CTO-team-2"
   }
 }
 
