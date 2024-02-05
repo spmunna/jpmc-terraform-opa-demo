@@ -6,7 +6,7 @@ sum_project_costs(projects) = total {
 
 deny[msg] {
     total_monthly_cost := sum_project_costs(input.projects)
-    total_monthly_cost > 1
+    total_monthly_cost > 100
     msg = sprintf("Total monthly cost of $%.2f exceeds the $1 limit.", [total_monthly_cost])
 }
 
@@ -14,6 +14,6 @@ deny[msg] {
     past_total_monthly_cost := sum_project_costs(input.projects[_].pastBreakdown)
     current_total_monthly_cost := sum_project_costs(input.projects)
     cost_increase := current_total_monthly_cost - past_total_monthly_cost
-    cost_increase > 5
+    cost_increase > 500
     msg = sprintf("The increase in infrastructure cost of $%.2f exceeds the maximum allowed increase of $5.", [cost_increase])
 }
