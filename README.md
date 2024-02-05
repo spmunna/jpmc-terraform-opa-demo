@@ -1,6 +1,6 @@
-# terraform-opa-infracost
+# jpmc-terraform-opa
 
-This repository demonstrates best practices for secure Infrastructure as Code (IaC) using Terraform, Open Policy Agent (OPA), and Infracost. It features an example setup to create an AWS EC2 instance and an RDS database, along with a GitHub Actions workflow for automated validation and cost estimation.
+This repository demonstrates best practices for secure Infrastructure as Code (IaC) using Terraform, and Open Policy Agent (OPA). It features an example setup to create an AWS EC2 instance and an RDS database, along with a GitHub Actions workflow for automated validation and cost estimation.
 
 ## Overview
 
@@ -17,4 +17,3 @@ The GitHub Actions workflow runs on pull requests, validating the Terraform code
 
 - Terraform v1.x
 - Open Policy Agent (OPA)
-- Infracost 
