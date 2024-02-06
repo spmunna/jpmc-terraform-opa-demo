@@ -13,19 +13,19 @@ resource "aws_instance" "jpmc-pac-ec2" {
   }
 }
 
-resource "aws_db_instance" "jpmc-pac-db" {
+resource "aws_db_instance" "jpmcPaCDatabase" {
   allocated_storage    = 20
   storage_type         = "gp2"
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
-  db_name              = "jpmc-pac-db"
+  db_name              = "jpmcPaCDatabase"
   username             = var.db_username
   password             = var.db_password
   parameter_group_name = "default.mysql5.7"
 
   tags = {
-    Name = "jpmc-pac-db"
+    Name = "jpmcPaCDatabase"
     env  = "development"
     team = "CTO-team"
   }
