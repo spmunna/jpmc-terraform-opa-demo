@@ -6,7 +6,7 @@ This repository demonstrates best practices for secure Infrastructure as Code (I
 
 The example Terraform code provisions an AWS EC2 instance and an RDS database. The repository also includes a Rego policy that enforces specific constraints:
 
-- Allow changes to infrastructure only if blast radius” are within reasonable bounds
+- Allow changes to infrastructure only if "blast radius” are within reasonable bounds
 - Ensure presence of pre-defined mandatory tags and labels on all deployable resources
 - Dont allow public ingress in a security group attached to resources like EC2
 - Dont allow "http" protocol and/or certain ports to be opened for the connectivity for specific servers/apps
