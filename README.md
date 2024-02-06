@@ -11,6 +11,7 @@ The example Terraform code provisions an AWS EC2 instance and an RDS database. T
 - Dont allow public ingress in a security group attached to resources like EC2
 - Dont allow "http" protocol and/or certain ports to be opened for the connectivity for specific servers/apps
 - Prevent the destruction of RDS instances
+- Prohibit privisioning of resources in a particular Region 
 - Ensure that the monthly cost for the EC2 instance is under $X
 - Ensure that the monthly cost for the RDS instance is under $Y
 - Prohibit creation of storage resources unless they are encrypted
