@@ -68,7 +68,7 @@ jobs:
         cost_p_len="${#cost_p}"
         echo "$tag_p_len"
         echo "$cost_p_len"       
-        if [[ tag_p_len > 5 || cost_p_len > 5 ]]; then    
+        if (( $tag_p_len > 5 || $cost_p_len > 5 )); then    
             echo "violation found..."
             exit 1         
         fi
