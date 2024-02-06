@@ -15,6 +15,7 @@ The example Terraform code provisions an AWS EC2 instance and an RDS database. T
 - Ensure that the monthly cost for the RDS instance is under $Y
 - Prohibit creation of storage resources unless they are encrypted
 - Dont allow deployment to happen on Fridays
+- ...
 
 The GitHub Actions workflow runs on pull requests, validating the Terraform code, generating Infracost JSON output, and evaluating the Rego policy against the generated output. If any constraints are violated, the workflow will fail, preventing the pull request from being merged.
 
