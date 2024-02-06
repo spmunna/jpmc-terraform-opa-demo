@@ -1,4 +1,4 @@
-# Policy as Code
+# Policy and Compliance as Code (PaCaC)
 
 This repository demonstrates best practices for secure Infrastructure as Code (IaC) using Terraform, and Open Policy Agent (OPA). It features an example setup to create an AWS EC2 instance and an RDS database, along with a GitHub Actions workflow for automated validation and cost estimation.
 
