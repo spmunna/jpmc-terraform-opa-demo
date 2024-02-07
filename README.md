@@ -8,7 +8,9 @@ The example Terraform code provisions an AWS EC2 instance and an RDS database. T
 
 - Allow changes to infrastructure only if "blast radius” are within reasonable bounds
 - Ensure presence of pre-defined mandatory tags and labels on all deployable resources
-- Dont allow public ingress in a security group attached to resources like EC2
+- Dont allow public ingress in a security group attached to resources like EC2 (PCI compliance)
+- Ensure that logging and monitoring are enabled (PCI compliance)
+- Deny plan to provision DB in a public subnet (PCI compliance)
 - Dont allow "http" protocol and/or certain ports to be opened for the connectivity for specific servers/apps
 - Deny touching IAM resources
 - Prevent the destruction of RDS instances
