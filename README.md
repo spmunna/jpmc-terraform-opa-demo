@@ -1,6 +1,6 @@
 # Policy and Compliance as Code (PaCaC)
 
-This repository demonstrates best practices for secure Infrastructure as Code (IaC) using Terraform, and Open Policy Agent (OPA). It features an example setup to create an AWS EC2 instance and an RDS database, along with a GitHub Actions workflow for automated validation and cost estimation.
+This repository demonstrates best practices for secure Infrastructure as Code (IaC) using Terraform, and Open Policy Agent (OPA). It features an example setup to create an AWS EC2 instance and an RDS database, along with a GitHub Actions workflow for automated security and compliance validations as well as cost estimation.
 
 ## Overview
 
@@ -10,6 +10,7 @@ The example Terraform code provisions an AWS EC2 instance and an RDS database. T
 - Ensure presence of pre-defined mandatory tags and labels on all deployable resources
 - Dont allow public ingress in a security group attached to resources like EC2
 - Dont allow "http" protocol and/or certain ports to be opened for the connectivity for specific servers/apps
+- Deny touching IAM resources
 - Prevent the destruction of RDS instances
 - Prohibit privisioning of resources in a particular Region 
 - Ensure that the monthly cost for the EC2 instance is under $X
