@@ -6,17 +6,17 @@ This repository demonstrates best practices for secure Infrastructure as Code (I
 
 The example Terraform code provisions an AWS EC2 instance and an RDS database. The repository also includes a Rego policy that enforces specific constraints:
 
-[1] Allow changes to infrastructure only if "blast radius” are within reasonable bounds
-[1] Ensure presence of pre-defined mandatory tags and labels on all deployable resources
+- Allow changes to infrastructure only if "blast radius” are within reasonable bounds
+- Ensure presence of pre-defined mandatory tags and labels on all deployable resources
 - Dont allow public ingress in a security group attached to resources like EC2 (PCI compliance)
 - Ensure that logging and monitoring are enabled (PCI compliance)
 - Deny plan to provision DB in a public subnet (PCI compliance)
 - Dont allow "http" protocol and/or certain ports to be opened for the connectivity for specific servers/apps
 - Deny touching IAM resources
-- Prevent single-AZ provisioning of infra that is supposed to host of a highly available app
+- Prevent single-AZ provisioning of infra that is supposed to host a highly available workload
 - Prevent the destruction of RDS instances
 - Prohibit privisioning of resources in a particular Region 
-- Ensure that the monthly cost for the EC2 instance is under $X and for RDS under $Y
+- Ensure that the monthly cost for the EC2 instance is under $X and for RDS is under $Y
 - Prohibit creation of storage resources unless they are encrypted
 - Dont allow deployment to happen on Fridays
 - And, many other custom security standards, best practices, design patterns, and compliance related policies
