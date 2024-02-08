@@ -6,8 +6,8 @@ This repository demonstrates best practices for secure Infrastructure as Code (I
 
 The example Terraform code provisions an AWS EC2 instance and an RDS database. The repository also includes a Rego policy that enforces specific constraints:
 
-- Allow changes to infrastructure only if "blast radius” are within reasonable bounds
-- Ensure presence of pre-defined mandatory tags and labels on all deployable resources
+[1] Allow changes to infrastructure only if "blast radius” are within reasonable bounds
+[1] Ensure presence of pre-defined mandatory tags and labels on all deployable resources
 - Dont allow public ingress in a security group attached to resources like EC2 (PCI compliance)
 - Ensure that logging and monitoring are enabled (PCI compliance)
 - Deny plan to provision DB in a public subnet (PCI compliance)
@@ -19,7 +19,7 @@ The example Terraform code provisions an AWS EC2 instance and an RDS database. T
 - Ensure that the monthly cost for the EC2 instance is under $X and for RDS under $Y
 - Prohibit creation of storage resources unless they are encrypted
 - Dont allow deployment to happen on Fridays
-- ...
+- And, many other custom security standards, best practices, design patterns, and compliance related policies
 
 The GitHub Actions workflow runs on pull requests, validating the Terraform code, generating Infracost JSON output, and evaluating the Rego policy against the generated output. If any constraints are violated, the workflow will fail, preventing the pull request from being merged.
 
