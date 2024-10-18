@@ -5,6 +5,7 @@ provider "aws" {
 resource "aws_instance" "jpmc-pac-ec2" {
   ami = "ami-09f85944838b438c5" 
   instance_type = "t2.micro"
+  #instance_type = "u-3tb1.56xlarge"
 
   tags = {
     Name = "jpmc-pac-ec2"
